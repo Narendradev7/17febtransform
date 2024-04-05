@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform Property Demo</title>
+  <style>
+.div1{
+    background-color: bisque;
+    height: 450px;
+    width: 500px;
+}
+
+    .container {
+    display: grid;
+    flex-direction: column;
+   }
+
+
+label {
+  margin-right: 10px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  margin-top: -300px;
+  margin-left: 500px;
+}
+
+.translate:checked ~ .box {
+  transform: translateY(50px);
+}
+
+#rotate:checked ~ .box {
+  transform: rotate(45deg);
+}
+
+#scale:checked ~ .box {
+  transform: scale(1.5);
+}
+
+/* #rotate10deg:checked ~ .box{
+    transform: rotate(10deg);
+} */
+
+#rotateX100deg:checked ~ .box{
+    transform: rotateX(100deg);
+}
+
+#rotateX45deg:checked ~ .box{
+    transform: rotateX(45deg);
+}
+
+#rotateY45deg:checked ~ .box{
+    transform: rotateY(45deg);
+}
+
+#rotateY80deg:checked ~ .box{
+    transform: rotateY(80deg);
+}
+
+#skew20deg:checked ~ .box{
+    transform: skew(20deg,20deg);
+}
+
+#matrix866:checked ~ .box{
+    transform: matrix(0.866,0.7,-0.8,0.866,0,0);
+}
+
+#matrix586:checked ~ .box{
+    transform: matrix(0.586,0.8,-0.8,0.586,0,0);
+}
+
+#matrix5862:checked ~ .box{
+    transform: matrix(0.586,0.8,-0.8,0.586,40,30);
+}
+
+.radio10deg:checked ~ .box{
+  transform: rotate(10deg);
+}
+
+
+
+</style>
+</head>
+<body>
+    <div class="div1">
+        <div class="container">
+          
+             <input class="radio10deg" type="radio">transform: rotate(10deg);
+             <input type="radio"  name="transform" value="rotateX100deg">transform: rotateX(100deg);
+             <input type="radio" id="rotateX45deg" name="transform" value="rotateX45deg">transform: rotateX(45deg);  
+    
+             <input type="radio" id="rotateY45deg" name="transform" value="rotateY45deg">transform: rotateY(45deg);
+             <input type="radio" id="rotateY80deg" name="transform" value="rotateY80deg">transform: rotateY(80deg);
+             <input type="radio" id="skew20deg" name="transform" value="skew20deg">transform: skew(20deg,20deg); 
+
+             <input type="radio" id="matrix866" name="transform" value="matrix866">transform: matrix(0.866,0.7,-0.8,0.866,0,0);
+             <input type="radio" id="matrix586" name="transform" value="matrix586">transform: matrix(0.586,0.8,-0.8,0.586,0,0);
+             <input type="radio" id="matrix5862" name="transform" value="matrix5862">transform: matrix(0.586,0.8,-0.8,0.586,40,30);
+            <div class="box">Roatatimg according to transform reuired</div>
+  </div>
+  </div>
+</body>
+</html>
